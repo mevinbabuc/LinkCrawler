@@ -119,8 +119,6 @@ for i in range(5):
 urlq.join()
 
 # Write the Unique links into a file or do other processing work
-f = open("CrawlData.txt", 'wb')
-for link in UniqueURLs:
-    f.write(link+"\r\n")
-
-f.close()
+with open("CrawlData.txt", 'wb') as f:
+    for link in UniqueURLs:
+        f.write(link+"\r\n")
